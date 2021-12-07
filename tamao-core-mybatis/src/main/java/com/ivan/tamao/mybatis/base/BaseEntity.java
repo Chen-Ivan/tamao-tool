@@ -1,9 +1,12 @@
 package com.ivan.tamao.mybatis.base;
 
+import cn.hutool.core.date.DatePattern;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
@@ -34,6 +37,8 @@ public class BaseEntity {
      * 创建时间
      */
     @TableField(fill = FieldFill.INSERT)
+    @DateTimeFormat(pattern = DatePattern.NORM_DATETIME_PATTERN)
+    @JsonFormat(pattern = DatePattern.NORM_DATETIME_PATTERN)
     private LocalDateTime createTime;
 
     /**
@@ -52,6 +57,8 @@ public class BaseEntity {
      * 更新时间
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
+    @DateTimeFormat(pattern = DatePattern.NORM_DATETIME_PATTERN)
+    @JsonFormat(pattern = DatePattern.NORM_DATETIME_PATTERN)
     private LocalDateTime updateTime;
 
 }

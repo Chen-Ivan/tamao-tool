@@ -12,6 +12,7 @@
         <module>tamao-core-tool</module>
         <module>tamao-core-mybatis</module>
         <module>tamao-core-dependencies</module>
+        <module>tamao-core-swagger</module>
     </modules>
 
     <properties>
@@ -59,7 +60,7 @@
         <!--hutool-->
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-core</artifactId>
+            <artifactId>hutool-all</artifactId>
             <version>${hutool.version}</version>
         </dependency>
     </dependencies>

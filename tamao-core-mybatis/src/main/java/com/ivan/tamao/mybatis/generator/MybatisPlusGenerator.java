@@ -1,9 +1,11 @@
 package com.ivan.tamao.mybatis.generator;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import com.ivan.tamao.mybatis.base.BaseEntity;
 
 import java.util.Collections;
 
@@ -29,12 +31,25 @@ public class MybatisPlusGenerator {
                             .outputDir("F:\\Code\\tamao-generator"); // 指定输出目录
                 })
                 .packageConfig(builder -> {
-                    builder.xml("mapper")
-                            .pathInfo(Collections.singletonMap(OutputFile.mapperXml, "F:\\Code\\tamao-generator")); // 设置mapperXml生成路径
+                    builder.parent("com.ivan.tamao").pathInfo(Collections.singletonMap(OutputFile.mapperXml, "F:\\Code\\tamao-generator")); // 设置mapperXml生成路径
                 })
                 .strategyConfig(builder -> {
                     builder.addInclude("t_user") // 设置需要生成的表名
-                            .addTablePrefix("t_"); // 设置过滤表前缀
+                            .addTablePrefix("t_")
+                            .entityBuilder()
+                            .superClass(BaseEntity.class)
+                            .enableColumnConstant()
+                            .enableLombok()
+                            .enableTableFieldAnnotation()
+                            .enableActiveRecord()
+                            .idType(IdType.AUTO)
+                            .controllerBuilder()
+                            .enableRestStyle()
+                            .mapperBuilder()
+                            .enableBaseColumnList()
+                            .enableBaseResultMap()
+                            .enableMapperAnnotation()
+                    ; // 设置过滤表前缀
                 })
                 .templateEngine(new FreemarkerTemplateEngine())
                 .execute();
