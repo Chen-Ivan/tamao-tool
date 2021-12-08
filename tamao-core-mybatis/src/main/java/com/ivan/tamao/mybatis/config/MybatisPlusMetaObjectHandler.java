@@ -18,7 +18,6 @@ import java.time.LocalDateTime;
  * @since 2021/12/5 22:00
  */
 @Slf4j
-@Component
 public class MybatisPlusMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
