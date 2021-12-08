@@ -20,6 +20,7 @@
         <mybatis.plus.version>3.4.3.4</mybatis.plus.version>
         <mybatis.plus.generator.version>3.5.1</mybatis.plus.generator.version>
         <hutool.version>5.7.16</hutool.version>
+        <swagger.version>3.0.0</swagger.version>
     </properties>
 
     <dependencyManagement>
@@ -45,6 +46,13 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
                 <version>${mybatis.plus.generator.version}</version>
+            </dependency>
+
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${swagger.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
