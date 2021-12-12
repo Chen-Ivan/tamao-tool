@@ -25,7 +25,7 @@ public class BaseEntity {
      * 创建者Id
      */
     @TableField(fill = FieldFill.INSERT)
-    private String createId;
+    private Long createId;
 
     /**
      * 创建者
@@ -45,7 +45,7 @@ public class BaseEntity {
      * 更新者ID
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private String updateId;
+    private Long updateId;
 
     /**
      * 更新者名称

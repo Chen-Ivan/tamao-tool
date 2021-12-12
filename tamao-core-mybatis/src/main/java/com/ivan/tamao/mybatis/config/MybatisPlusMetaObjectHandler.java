@@ -24,20 +24,20 @@ public class MybatisPlusMetaObjectHandler implements MetaObjectHandler {
         log.info("start insert fill ....");
         LocalDateTime now = LocalDateTime.now();
 
-        fillValIfNullByName("createId", 1L, metaObject, false);
-        fillValIfNullByName("createName", "admin", metaObject, false);
-        fillValIfNullByName("createTime", now, metaObject, false);
-        fillValIfNullByName("updateId", 1L, metaObject, false);
-        fillValIfNullByName("updateName", "admin", metaObject, false);
-        fillValIfNullByName("updateTime", now, metaObject, false);
+        fillValIfNullByName("createId", Long.class, 1L, metaObject, false, true);
+        fillValIfNullByName("createName", String.class, "admin", metaObject, false, true);
+        fillValIfNullByName("createTime", LocalDateTime.class, now, metaObject, false, true);
+        fillValIfNullByName("updateId", Long.class,1L, metaObject, false, true);
+        fillValIfNullByName("updateName", String.class,"admin", metaObject, false, true);
+        fillValIfNullByName("updateTime", LocalDateTime.class, now, metaObject, false, true);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("start update fill ....");
-        fillValIfNullByName("updateId", 1L, metaObject, true);
-        fillValIfNullByName("updateName", "admin", metaObject, true);
-        fillValIfNullByName("updateTime", LocalDateTime.now(), metaObject, true);
+        fillValIfNullByName("updateId", Long.class,1L, metaObject, true, false);
+        fillValIfNullByName("updateName", String.class,"admin", metaObject, true, false);
+        fillValIfNullByName("updateTime", LocalDateTime.class, LocalDateTime.now(), metaObject, true, false);
     }
 
 
@@ -48,7 +48,7 @@ public class MybatisPlusMetaObjectHandler implements MetaObjectHandler {
      * @param metaObject MetaObject
      * @param isCover 是否覆盖原有值,避免更新操作手动入参
      */
-    private static void fillValIfNullByName(String fieldName, Object fieldVal, MetaObject metaObject, boolean isCover) {
+    private <T, E extends T> void fillValIfNullByName(String fieldName, Class<T> fieldType, E fieldVal, MetaObject metaObject, boolean isCover, boolean isInsert) {
         // 1. 没有 get 方法
         if (!metaObject.hasGetter(fieldName) || !metaObject.hasSetter(fieldName)) {
             return;
@@ -60,9 +60,12 @@ public class MybatisPlusMetaObjectHandler implements MetaObjectHandler {
             return;
         }
         // 3. field 类型相同时设置
-        Class<?> getterType = metaObject.getGetterType(fieldName);
-        if (ClassUtils.isAssignableValue(getterType, fieldVal)) {
-            metaObject.setValue(fieldName, fieldVal);
+        if (ClassUtils.isAssignableValue(fieldType, fieldVal)) {
+            if (isInsert) {
+                this.strictInsertFill(metaObject, fieldName, fieldType, fieldVal);
+            } else {
+                this.strictUpdateFill(metaObject, fieldName, fieldType ,fieldVal);
+            }
         }
     }
 }

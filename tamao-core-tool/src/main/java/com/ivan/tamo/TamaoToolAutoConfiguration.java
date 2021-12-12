@@ -1,6 +1,7 @@
-package com.ivan.tamo.config;
+package com.ivan.tamo;
 
 import com.ivan.tamo.api.ResponseAdvice;
+import com.ivan.tamo.exception.GlobalExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -22,6 +23,11 @@ public class TamaoToolAutoConfiguration implements WebMvcConfigurer {
     @Bean
     public ResponseAdvice responseAdvice() {
         return new ResponseAdvice();
+    }
+
+    @Bean
+    public GlobalExceptionHandler globalExceptionHandler() {
+        return new GlobalExceptionHandler();
     }
 
     @Override
