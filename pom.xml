@@ -13,13 +13,15 @@
         <module>tamao-core-mybatis</module>
         <module>tamao-core-dependencies</module>
         <module>tamao-core-swagger</module>
+        <module>tamao-core-security</module>
     </modules>
 
     <properties>
         <spring.boot.version>2.5.6</spring.boot.version>
         <mybatis.plus.version>3.4.3.4</mybatis.plus.version>
         <mybatis.plus.generator.version>3.5.1</mybatis.plus.generator.version>
-        <hutool.version>5.7.16</hutool.version>
+        <shiro.version>1.8.0</shiro.version>
+        <hutool.version>5.7.17</hutool.version>
         <swagger.version>3.0.0</swagger.version>
     </properties>
 
@@ -53,6 +55,13 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+
+            <!--spring-shiro-->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring-boot-web-starter</artifactId>
+                <version>${shiro.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

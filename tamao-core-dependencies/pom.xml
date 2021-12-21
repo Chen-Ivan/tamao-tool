@@ -19,6 +19,7 @@
         <tamao.core.tool.version>${project.version}</tamao.core.tool.version>
         <tamao.core.mybatis.version>${project.version}</tamao.core.mybatis.version>
         <tamao.core.swagger.version>${project.version}</tamao.core.swagger.version>
+        <tamao.core.security.version>${project.version}</tamao.core.security.version>
     </properties>
 
     <dependencyManagement>
@@ -43,6 +44,13 @@
                 <groupId>com.ivan</groupId>
                 <artifactId>tamao-core-swagger</artifactId>
                 <version>${tamao.core.swagger.version}</version>
+            </dependency>
+
+            <!--tamao-core-security-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-core-security</artifactId>
+                <version>${tamao.core.security.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
