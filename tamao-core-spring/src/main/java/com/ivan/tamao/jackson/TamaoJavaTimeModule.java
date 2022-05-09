@@ -1,4 +1,4 @@
-package com.ivan.tamo.jackson;
+package com.ivan.tamao.jackson;
 
 import cn.hutool.core.date.DatePattern;
 import com.fasterxml.jackson.databind.module.SimpleModule;

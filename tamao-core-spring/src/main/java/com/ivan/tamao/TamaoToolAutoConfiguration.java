@@ -1,7 +1,8 @@
 package com.ivan.tamo;
 
-import com.ivan.tamo.api.ResponseAdvice;
-import com.ivan.tamo.exception.GlobalExceptionHandler;
+
+import com.ivan.tamao.exception.GlobalExceptionHandler;
+import com.ivan.tamao.exception.ResponseAdvice;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;

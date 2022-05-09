@@ -1,4 +1,4 @@
-package com.ivan.tamo.jackson;
+package com.ivan.tamao.jackson;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;

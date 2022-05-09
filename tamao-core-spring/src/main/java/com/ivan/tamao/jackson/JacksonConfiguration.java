@@ -1,4 +1,4 @@
-package com.ivan.tamo.config;
+package com.ivan.tamao.jackson;
 
 import cn.hutool.core.date.DatePattern;
 import com.fasterxml.jackson.core.JsonParser;
@@ -6,7 +6,6 @@ import com.fasterxml.jackson.core.json.JsonReadFeature;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.ivan.tamo.jackson.TamaoJavaTimeModule;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

@@ -14,6 +14,8 @@
         <module>tamao-core-dependencies</module>
         <module>tamao-core-swagger</module>
         <module>tamao-core-security</module>
+        <module>tamao-core-cache</module>
+        <module>tamao-core-spring</module>
     </modules>
 
     <properties>

@@ -1,4 +1,4 @@
-package com.ivan.tamo.jackson;
+package com.ivan.tamao.jackson;
 
 import cn.hutool.core.util.StrUtil;
 import com.fasterxml.jackson.core.JsonGenerator;

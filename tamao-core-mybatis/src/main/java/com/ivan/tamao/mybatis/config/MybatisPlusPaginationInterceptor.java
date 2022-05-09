@@ -1,15 +1,12 @@
 package com.ivan.tamao.mybatis.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
-import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.Executor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 
 /**
  * <p></p>

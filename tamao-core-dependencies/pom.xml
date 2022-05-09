@@ -20,6 +20,7 @@
         <tamao.core.mybatis.version>${project.version}</tamao.core.mybatis.version>
         <tamao.core.swagger.version>${project.version}</tamao.core.swagger.version>
         <tamao.core.security.version>${project.version}</tamao.core.security.version>
+        <tamao.core.cache.version>${project.version}</tamao.core.cache.version>
     </properties>
 
     <dependencyManagement>
@@ -51,6 +52,13 @@
                 <groupId>com.ivan</groupId>
                 <artifactId>tamao-core-security</artifactId>
                 <version>${tamao.core.security.version}</version>
+            </dependency>
+
+            <!--tamao-core-cache-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-core-cache</artifactId>
+                <version>${tamao.core.cache.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

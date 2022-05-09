@@ -1,6 +1,5 @@
-package com.ivan.tamo.exception;
+package com.ivan.tamao.exception;
 
-import com.ivan.tamo.api.IResultCode;
 import com.ivan.tamo.api.R;
 import com.ivan.tamo.api.ResultCode;
 import lombok.extern.slf4j.Slf4j;

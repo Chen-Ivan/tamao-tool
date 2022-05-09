@@ -1,4 +1,4 @@
-package com.ivan.tamo.redis;
+package com.ivan.tamao.redis;
 
 import org.springframework.cache.interceptor.SimpleKey;
 import org.springframework.core.convert.ConversionService;

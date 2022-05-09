@@ -9,11 +9,25 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tamao-core-tool</artifactId>
+    <artifactId>tamao-core-spring</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <!--spring web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--tamao-core-tool-->
+        <dependency>
+            <groupId>com.ivan</groupId>
+            <artifactId>tamao-core-tool</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
