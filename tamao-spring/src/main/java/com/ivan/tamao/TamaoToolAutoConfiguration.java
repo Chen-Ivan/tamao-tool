@@ -1,4 +1,4 @@
-package com.ivan.tamo;
+package com.ivan.tamao;
 
 
 import com.ivan.tamao.exception.GlobalExceptionHandler;

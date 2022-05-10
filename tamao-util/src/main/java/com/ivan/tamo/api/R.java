@@ -1,14 +1,12 @@
 package com.ivan.tamo.api;
 
 import cn.hutool.core.util.ObjectUtil;
+import cn.hutool.http.HttpStatus;
 import com.ivan.tamo.constant.TamaoConstant;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.lang.Nullable;
-
-import javax.servlet.http.HttpServletResponse;
 import java.io.Serializable;
 import java.util.Optional;
 
@@ -59,7 +57,7 @@ public class R<T> implements Serializable {
 	 * @param result Result
 	 * @return 是否成功
 	 */
-	public static boolean isSuccess(@Nullable R<?> result) {
+	public static boolean isSuccess(R<?> result) {
 		return Optional.ofNullable(result)
 			.map(x -> ObjectUtil.equals(ResultCode.SUCCESS.code, x.code))
 			.orElse(Boolean.FALSE);
@@ -71,7 +69,7 @@ public class R<T> implements Serializable {
 	 * @param result Result
 	 * @return 是否成功
 	 */
-	public static boolean isNotSuccess(@Nullable R<?> result) {
+	public static boolean isNotSuccess(R<?> result) {
 		return !R.isSuccess(result);
 	}
 
@@ -95,7 +93,7 @@ public class R<T> implements Serializable {
 	 * @return R
 	 */
 	public static <T> R<T> data(T data, String msg) {
-		return data(HttpServletResponse.SC_OK, data, msg);
+		return data(HttpStatus.HTTP_OK, data, msg);
 	}
 
 	/**
