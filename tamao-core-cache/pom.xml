@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tamao-tool-cache</artifactId>
+    <artifactId>tamao-core-cache</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
