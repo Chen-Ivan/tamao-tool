@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tamao-core-swagger</artifactId>
+    <artifactId>tamao-spring</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,24 +17,17 @@
     </properties>
 
     <dependencies>
-
         <!--spring web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--自动装配-->
-       <dependency>
-           <groupId>org.springframework.boot</groupId>
-           <artifactId>spring-boot-configuration-processor</artifactId>
-           <optional>true</optional>
-       </dependency>
-
-        <!--swagger-->
+        <!--tamao-core-tool-->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
+            <groupId>com.ivan</groupId>
+            <artifactId>tamao-util</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

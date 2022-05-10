@@ -9,25 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tamao-core-security</artifactId>
+    <artifactId>tamao-util</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-    <dependencies>
-        <!--spring-shiro-->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring-boot-web-starter</artifactId>
-        </dependency>
-
-        <!--tamao-core-tool-->
-        <dependency>
-            <groupId>com.ivan</groupId>
-            <artifactId>tamao-core-tool</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
 </project>

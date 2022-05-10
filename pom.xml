@@ -9,13 +9,14 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
-        <module>tamao-core-tool</module>
-        <module>tamao-core-mybatis</module>
-        <module>tamao-core-dependencies</module>
-        <module>tamao-core-swagger</module>
-        <module>tamao-core-security</module>
-        <module>tamao-core-cache</module>
-        <module>tamao-core-spring</module>
+        <module>tamao-util</module>
+        <module>tamao-mybatis</module>
+        <module>tamao-dependencies</module>
+        <module>tamao-swagger</module>
+        <module>tamao-security</module>
+        <module>tamao-cache</module>
+        <module>tamao-spring</module>
+        <module>tamao-file</module>
     </modules>
 
     <properties>
@@ -23,7 +24,7 @@
         <mybatis.plus.version>3.4.3.4</mybatis.plus.version>
         <mybatis.plus.generator.version>3.5.1</mybatis.plus.generator.version>
         <shiro.version>1.8.0</shiro.version>
-        <hutool.version>5.7.17</hutool.version>
+        <hutool.version>5.7.22</hutool.version>
         <swagger.version>3.0.0</swagger.version>
     </properties>
 

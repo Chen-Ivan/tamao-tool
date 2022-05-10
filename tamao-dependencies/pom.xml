@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tamao-tool</artifactId>
+        <groupId>com.ivan</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <artifactId>tamao-dependencies</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <tamao.tool.version>${project.version}</tamao.tool.version>
+        <tamao.mybatis.version>${project.version}</tamao.mybatis.version>
+        <tamao.swagger.version>${project.version}</tamao.swagger.version>
+        <tamao.security.version>${project.version}</tamao.security.version>
+        <tamao.cache.version>${project.version}</tamao.cache.version>
+        <tamao.file.version>${project.version}</tamao.file.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!--tamao-tool-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-tool</artifactId>
+                <version>${tamao.tool.version}</version>
+            </dependency>
+
+            <!--tamao-mybatis-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-mybatis</artifactId>
+                <version>${tamao.mybatis.version}</version>
+            </dependency>
+
+            <!--tamao-swagger-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-swagger</artifactId>
+                <version>${tamao.swagger.version}</version>
+            </dependency>
+
+            <!--tamao-security-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-security</artifactId>
+                <version>${tamao.security.version}</version>
+            </dependency>
+
+            <!--tamao-cache-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-cache</artifactId>
+                <version>${tamao.cache.version}</version>
+            </dependency>
+
+            <!--tamao-file-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-file</artifactId>
+                <version>${tamao.file.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
