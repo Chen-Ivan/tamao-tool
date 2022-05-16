@@ -14,6 +14,22 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <easyexcel.version>3.0.5</easyexcel.version>
     </properties>
 
+    <dependencies>
+        <!--easy excel-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>${easyexcel.version}</version>
+        </dependency>
+
+        <!--tamao-core-spring-->
+        <dependency>
+            <groupId>com.ivan</groupId>
+            <artifactId>tamao-spring</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

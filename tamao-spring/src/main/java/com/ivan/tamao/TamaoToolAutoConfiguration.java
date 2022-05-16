@@ -1,9 +1,6 @@
 package com.ivan.tamao;
 
 
-import com.ivan.tamao.exception.GlobalExceptionHandler;
-import com.ivan.tamao.exception.ResponseAdvice;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -20,16 +17,6 @@ import java.util.List;
  */
 @Configuration(proxyBeanMethods = false)
 public class TamaoToolAutoConfiguration implements WebMvcConfigurer {
-
-    @Bean
-    public ResponseAdvice responseAdvice() {
-        return new ResponseAdvice();
-    }
-
-    @Bean
-    public GlobalExceptionHandler globalExceptionHandler() {
-        return new GlobalExceptionHandler();
-    }
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {

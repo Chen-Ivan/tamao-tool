@@ -16,22 +16,24 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
 
-        <tamao.tool.version>${project.version}</tamao.tool.version>
+        <tamao.util.version>${project.version}</tamao.util.version>
         <tamao.mybatis.version>${project.version}</tamao.mybatis.version>
         <tamao.swagger.version>${project.version}</tamao.swagger.version>
         <tamao.security.version>${project.version}</tamao.security.version>
         <tamao.cache.version>${project.version}</tamao.cache.version>
+        <tamao.spring.version>${project.version}</tamao.spring.version>
         <tamao.file.version>${project.version}</tamao.file.version>
+        <tamao.excel.version>${project.version}</tamao.excel.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
 
-            <!--tamao-tool-->
+            <!--tamao-util-->
             <dependency>
                 <groupId>com.ivan</groupId>
-                <artifactId>tamao-tool</artifactId>
-                <version>${tamao.tool.version}</version>
+                <artifactId>tamao-util</artifactId>
+                <version>${tamao.util.version}</version>
             </dependency>
 
             <!--tamao-mybatis-->
@@ -65,8 +67,22 @@
             <!--tamao-file-->
             <dependency>
                 <groupId>com.ivan</groupId>
+                <artifactId>tamao-spring</artifactId>
+                <version>${tamao.spring.version}</version>
+            </dependency>
+
+            <!--tamao-file-->
+            <dependency>
+                <groupId>com.ivan</groupId>
                 <artifactId>tamao-file</artifactId>
                 <version>${tamao.file.version}</version>
+            </dependency>
+
+            <!--tamao-excel-->
+            <dependency>
+                <groupId>com.ivan</groupId>
+                <artifactId>tamao-excel</artifactId>
+                <version>${tamao.excel.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

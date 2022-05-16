@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.ivan.tamo.TamaoToolAutoConfiguration
+    com.ivan.tamao.TamaoToolAutoConfiguration
